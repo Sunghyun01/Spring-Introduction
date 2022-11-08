@@ -9,7 +9,11 @@ import Repository.MemoryMemberRepo;
 
 public class MemberService {
 	
-	private final MemberRepo memberRepository = new MemoryMemberRepo();
+	private final MemberRepo memberRepository;
+	
+	public MemberService(MemberRepo memberRepository) {
+		this.memberRepository = memberRepository;
+	}
 	
 	//회원가입
 	public long join(Member member) {
