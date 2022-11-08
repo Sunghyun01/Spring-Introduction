@@ -29,18 +29,20 @@ public class MemoryMemberRepo implements MemberRepo{
 	}
 
 	@Override
-	public Optional<Member> findByName(String name) {
-		// TODO Auto-generated method stub
-		store.values().stream()
-			.filter(member->member.getName().equals(name))
-			.findAny();
-		return Optional.empty();
-	}
+    public Optional<Member> findByName(String name) {
+        return store.values().stream()
+                .filter(member -> member.getName().equals(name))
+                .findAny(); //자바 람다식
+    }
 
 	@Override
 	public List<Member> findAll() {
 		// TODO Auto-generated method stub
 		return new ArrayList<>(store.values());
+	}
+	
+	public void clearStore() {
+		store.clear();
 	}
 
 }
