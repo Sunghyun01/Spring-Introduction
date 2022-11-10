@@ -9,9 +9,11 @@ import java.util.Optional;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.stereotype.Repository;
 
 import Domain.Member;
 import Repository.MemoryMemberRepo;
+
 
 class MemoryMemberRepoTest {
 

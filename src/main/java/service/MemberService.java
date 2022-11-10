@@ -3,10 +3,13 @@ package service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import Domain.Member;
 import Repository.MemberRepo;
 import Repository.MemoryMemberRepo;
 
+@Service
 public class MemberService {
 	
 	private final MemberRepo memberRepository;
