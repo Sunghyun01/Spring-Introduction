@@ -9,7 +9,6 @@ import Domain.Member;
 import Repository.MemberRepo;
 import Repository.MemoryMemberRepo;
 
-@Service
 public class MemberService {
 	
 	private final MemberRepo memberRepository;
