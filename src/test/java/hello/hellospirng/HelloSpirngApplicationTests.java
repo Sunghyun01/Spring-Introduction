@@ -1,10 +1,10 @@
-package com.inflearn.shyun;
+package hello.hellospirng;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ShyunApplicationTests {
+class HelloSpirngApplicationTests {
 
 	@Test
 	void contextLoads() {

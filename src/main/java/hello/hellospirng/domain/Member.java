@@ -1,4 +1,4 @@
-package Domain;
+package hello.hellospirng.domain;
 
 public class Member {
 	private long id;

@@ -1,4 +1,9 @@
-package Repository;
+package hello.hellospirng.repository;
+
+import hello.hellospirng.domain.Member;
+import org.springframework.stereotype.Repository;
+
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,10 +13,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
-import Domain.Member;
 
 @Repository
-public class MemoryMemberRepo implements MemberRepo{
+public class MemoryMemberRepository implements MemberRepository{
 
 	private static Map<Long, Member> store = new HashMap<>();
 	private static long sequence = 8L;
@@ -48,4 +52,11 @@ public class MemoryMemberRepo implements MemberRepo{
 		store.clear();
 	}
 
+	@Override
+	public Optional<hello.hellospirng.domain.Member> findById(Long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
 }
+
