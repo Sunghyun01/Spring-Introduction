@@ -30,12 +30,6 @@ public class MemoryMemberRepository implements MemberRepository{
 	}
 
 	@Override
-	public Optional<Member> findById(long id) {
-		// TODO Auto-generated method stub
-		return Optional.ofNullable(store.get(id));
-	}
-
-	@Override
     public Optional<Member> findByName(String name) {
         return store.values().stream()
                 .filter(member -> member.getName().equals(name))
