@@ -10,12 +10,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
-//@Transactional
-// commit을 날리지 않고 테스트 후 rollback하는 annotation
+@Transactional // commit을 날리지 않고 테스트 후 rollback하는 annotation
+
 class MemberServiceIntegrationTest {
     // 테스트케이스는 가장 편한 field injection을 많이 사용
     @Autowired MemberService memberService;
@@ -50,16 +51,6 @@ class MemberServiceIntegrationTest {
 
         //then
         Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-
-//        memberService.join(member1);
-        //then
-//        try {
-//            memberService.join(member2); //두번째 조인시에 예외가 발생해야
-//            fail();
-//        } catch (IllegalStateException e) {
-//            //예외가 정상적으로 발생한 경우
-//            Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-//        }
 
     }
 
