@@ -1,7 +1,6 @@
 package hello.hellospirng.repository;
 
 import hello.hellospirng.domain.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
